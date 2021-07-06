@@ -182,6 +182,6 @@ if __name__ == '__main__':
         # for epoch in range(1, 6):
             train(args, model, device, train_loader, optimizer, epoch, writer, periscope)
             test(args, model, device, test_loader, writer, epoch, periscope)
-        periscope.save_model(model_type = "pytorch", model = model, artifact_path="pytorch-model", registered_model_name="pytorch-DDP-example")
+        periscope.save_model(model_type = "pytorch", model = model, artifact_path="pytorch-model", registered_model_name="pytorch-ddp-example")
     if (args.save_model):
         torch.save(model.state_dict(),"mnist_cnn.pt")
